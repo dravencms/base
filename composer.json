@@ -48,7 +48,7 @@
     "umpirsky/currency-list": "^1.0",
     "salamek/nette-gitlab": "dev-master",
     "michelf/php-markdown": "^1.6",
-    "salamek/nette-cms": "@dev",
+    "salamek/nette-cms": "@dev"
   },
   "require-dev": {
     "nette/tester": "@dev"
