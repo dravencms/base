@@ -33,6 +33,7 @@
     "ipub/visual-paginator": "@dev",
     "kdyby/doctrine": "^3.1.2",
     "rixxi/gedmo": "^1.0",
+    "minetro/recaptcha": "@dev",
     "zenify/doctrine-migrations": "^2.3",
     "salamek/nette-files": "@dev"
   },
