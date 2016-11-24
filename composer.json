@@ -39,7 +39,6 @@
     "rixxi/gedmo": "^1.0",
     "minetro/recaptcha": "@dev",
     "zenify/doctrine-migrations": "^2.3",
-    "salamek/nette-files": "@dev",
 
     "joseki/pdf-response": "dev-master",
     "tecnickcom/tc-lib-barcode": ">=1.7.1",
@@ -52,7 +51,8 @@
     "umpirsky/currency-list": "^1.0",
     "salamek/nette-gitlab": "dev-master",
     "michelf/php-markdown": "^1.6",
-    "salamek/nette-cms": "@dev"
+
+    "dravencms/structure": "@dev"
   },
   "require-dev": {
     "nette/tester": "@dev"
