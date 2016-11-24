@@ -26,9 +26,6 @@ abstract class GlobalPresenter extends \Nette\Application\UI\Presenter
     /** @var LoaderFactory @inject */
     public $webLoader;
 
-    /** @var \Dravencms\Components\BaseFormFactory @inject */
-    public $baseFormFactory;
-
     public function startup()
     {
         $this->template->lang = $this->locale;
