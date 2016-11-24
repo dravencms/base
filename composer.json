@@ -35,7 +35,20 @@
     "rixxi/gedmo": "^1.0",
     "minetro/recaptcha": "@dev",
     "zenify/doctrine-migrations": "^2.3",
-    "salamek/nette-files": "@dev"
+    "salamek/nette-files": "@dev",
+
+    "joseki/pdf-response": "dev-master",
+    "tecnickcom/tc-lib-barcode": ">=1.7.1",
+    "gopay/payments-sdk-php": ">=1.0.1",
+    "doctrine/data-fixtures": "^1.1",
+    "o5/grido": "dev-master",
+    "ipub/gravatar": "^2.0",
+    "salamek/nette-templated-email": "@dev",
+    "umpirsky/country-list": "^2.0",
+    "umpirsky/currency-list": "^1.0",
+    "salamek/nette-gitlab": "dev-master",
+    "michelf/php-markdown": "^1.6",
+    "salamek/nette-cms": "@dev",
   },
   "require-dev": {
     "nette/tester": "@dev"
