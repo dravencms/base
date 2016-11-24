@@ -18,6 +18,10 @@
     {
       "type": "vcs",
       "url": "git@gitlab.salamek.cz:sadam/nette-files.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@gitlab.salamek.cz:sadam/nette-templated-email.git"
     }
   ],
   "require": {
