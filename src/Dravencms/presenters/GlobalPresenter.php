@@ -13,8 +13,6 @@ use Dravencms\Model\Locale\Repository\LocaleRepository;
  */
 abstract class GlobalPresenter extends \Nette\Application\UI\Presenter
 {
-    use TGravatar;
-
     public $forceLoggedIn = false;
 
     /** @persistent */

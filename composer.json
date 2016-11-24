@@ -26,7 +26,8 @@
     "salamek/raven-nette": "dev-master",
     "ipub/visual-paginator": "@dev",
     "kdyby/doctrine": "^3.1.2",
-    "rixxi/gedmo": "^1.0"
+    "rixxi/gedmo": "^1.0",
+    "zenify/doctrine-migrations": "^2.3"
   },
   "require-dev": {
     "nette/tester": "@dev"
