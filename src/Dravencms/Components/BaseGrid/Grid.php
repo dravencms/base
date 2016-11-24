@@ -5,8 +5,7 @@
 
 namespace Dravencms\Components\BaseGrid;
 
-
-use Dravencms\Components\Columns\Boolean;
+use Dravencms\Components\BaseGrid\Columns\Boolean;
 
 class Grid extends \Grido\Grid
 {

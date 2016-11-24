@@ -1,6 +1,6 @@
 <?php
 
-namespace Dravencms\Components\Columns;
+namespace Dravencms\Components\BaseGrid\Columns;
 
 /**
  * Copyright (C) 2016 Adam Schubert <adam.schubert@sg1-game.net>.
