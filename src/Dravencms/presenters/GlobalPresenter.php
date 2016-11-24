@@ -3,7 +3,6 @@
 namespace Dravencms;
 
 use Gedmo\Translatable\TranslatableListener;
-use IPub\Gravatar\TGravatar;
 use Kdyby\Translation\Translator;
 use WebLoader\Nette\LoaderFactory;
 use Dravencms\Model\Locale\Repository\LocaleRepository;

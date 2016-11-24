@@ -1,7 +1,8 @@
 <?php
 
-namespace Dravencms\Components;
+namespace Dravencms\Components\BaseForm;
 
+use Dravencms\Components\BaseControl\BaseControl;
 use Nette\Forms\IFormRenderer;
 use Nette\Localization\ITranslator;
 use Minetro\Forms\reCAPTCHA\ReCaptchaValidator;

@@ -1,7 +1,8 @@
 <?php
 
-namespace Dravencms\Components;
+namespace Dravencms\Components\BasePaginator;
 
+use Dravencms\Components\BaseControl\BaseControl;
 use IPub\VisualPaginator\Components\Control;
 use Nette\ComponentModel\IContainer;
 use Nette\Localization\ITranslator;

@@ -1,7 +1,8 @@
 <?php
 
-namespace Dravencms\Components;
+namespace Dravencms\Components\BaseGrid;
 
+use Dravencms\Components\BaseControl\BaseControl;
 use Grido\Components\Filters\Filter;
 use Grido\Customization;
 use Nette\ComponentModel\IContainer;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Dravencms;
+
 use Nette\Application\Routers\Route;
 use Nette\Application\Routers\RouteList;
 use Dravencms\Model\Structure\Repository\MenuRepository;
@@ -24,7 +26,7 @@ class RouterFactory
     }
 
     /**
-     * @return Nette\Application\IRouter
+     * @return \Nette\Application\IRouter
      */
     public function createRouter()
     {
