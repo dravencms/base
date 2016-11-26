@@ -6,12 +6,14 @@ use Gedmo\Translatable\TranslatableListener;
 use Kdyby\Translation\Translator;
 use WebLoader\Nette\LoaderFactory;
 use Dravencms\Model\Locale\Repository\LocaleRepository;
+use Nette\Application\UI\Presenter;
 
 /**
  * Base presenter for all application presenters.
  */
-abstract class GlobalPresenter extends \Nette\Application\UI\Presenter
+abstract class BasePresenter extends Presenter
 {
+    /** @var bool */
     public $forceLoggedIn = false;
 
     /** @persistent */

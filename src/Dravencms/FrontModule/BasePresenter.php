@@ -5,10 +5,9 @@
 
 namespace Dravencms\FrontModule;
 
-use Dravencms\GlobalPresenter;
 use Nette\Application\UI\Presenter;
 
-class BasePresenter extends GlobalPresenter
+class BasePresenter extends \Dravencms\BasePresenter
 {
     public function startup()
     {

@@ -14,16 +14,6 @@
       "name": "Adam Schubert"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@gitlab.salamek.cz:sadam/nette-files.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@gitlab.salamek.cz:sadam/nette-templated-email.git"
-    }
-  ],
   "require": {
     "php": ">=5.3.0",
     "nette/nette": ">=2.1",
