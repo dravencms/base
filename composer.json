@@ -1,6 +1,6 @@
 {
   "name": "dravencms/base",
-  "type": "library",
+  "type": "dravencms-package",
   "description": "DravenCMS Base",
   "keywords": [
     "dravencms",
