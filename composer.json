@@ -38,9 +38,7 @@
     "umpirsky/country-list": "^2.0",
     "umpirsky/currency-list": "^1.0",
     "salamek/nette-gitlab": "dev-master",
-    "michelf/php-markdown": "^1.6",
-
-    "dravencms/structure": "@dev"
+    "michelf/php-markdown": "^1.6"
   },
   "require-dev": {
     "nette/tester": "@dev"
