@@ -8,10 +8,10 @@ use Nette\DI\Compiler;
 use Nette\DI\Configurator;
 use Salamek\Cms\DI\CmsExtension;
 /**
- * Class StructureExtension
+ * Class BaseExtension
  * @package Dravencms\Structure\DI
  */
-class StructureExtension extends Nette\DI\CompilerExtension
+class BaseExtension extends Nette\DI\CompilerExtension
 {
 
     public function loadConfiguration()
