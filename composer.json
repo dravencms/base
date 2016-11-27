@@ -49,5 +49,14 @@
     "psr-0": {
       "Dravencms\\": "src/"
     }
+  },
+  "extra": {
+    "dravencms": {
+      "configuration": {
+        "extensions": {
+          "base": "Dravencms\\Base\\DI\\BaseExtension"
+        }
+      }
+    }
   }
 }
