@@ -17,6 +17,7 @@
   "require": {
     "php": ">=5.3.0",
     "nette/nette": "2.4",
+    "nette/robot-loader": "2.4.1",
     "dg/adminer-custom": "1",
     "janmarek/webloader": "dev-master",
     "joseki/webloader-filters": "~1.0",
