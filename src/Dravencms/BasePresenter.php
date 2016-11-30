@@ -2,6 +2,7 @@
 
 namespace Dravencms;
 
+use Dravencms\Base\Base;
 use Gedmo\Translatable\TranslatableListener;
 use Kdyby\Translation\Translator;
 use WebLoader\Nette\LoaderFactory;
@@ -27,6 +28,9 @@ abstract class BasePresenter extends Presenter
 
     /** @var LoaderFactory @inject */
     public $webLoader;
+
+    /** @var Base @inject */
+    public $base;
 
     public function startup()
     {
@@ -66,6 +70,12 @@ abstract class BasePresenter extends Presenter
 
         $list[] = realpath(__DIR__."/..").'/'.$this->getNamespace()."Module/templates/@$layout.latte";
 
+
+        if ($found = $this->base->findTemplate($layout))
+        {
+            $list[] = $found;
+        }
+        
         return $list;
     }
 

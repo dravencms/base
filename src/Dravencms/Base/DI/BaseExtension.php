@@ -28,6 +28,16 @@ class BaseExtension extends Nette\DI\CompilerExtension
         $this->loadConsole();
     }
 
+    public function beforeCompile()
+    {
+        $builder = $this->getContainerBuilder();
+        $cms = $builder->getDefinition($this->prefix('base'));
+
+
+        foreach ($builder->findByType('Dravencms\Base\ITemplate') AS $serviceName => $service) {
+                $cms->addSetup('addTemplateProvider', ['@' . $serviceName]);
+        }
+    }
 
     /**
      * @param Configurator $config
