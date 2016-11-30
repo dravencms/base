@@ -1,12 +1,13 @@
 <?php
 
-namespace Dravencms\Base\Command;
+namespace Dravencms\Base\Console;
 
+use Dravencms\Base\Base;
+use Symfony\Component\Console\Command\Command;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Kdyby\Doctrine\EntityManager;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -18,19 +19,24 @@ class DefaultDataCommand extends Command
     /** @var EntityManager @inject */
     public $em;
 
+    /** @var Base @inject */
+    public $base;
 
     protected function configure()
     {
-        $this->setName('fix:a')
+        $this->setName('orm:default-data:load')
             ->setDescription('Load data fixtures to your database.');
     }
-
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {
             $loader = new Loader();
-            $loader->loadFromDirectory(__DIR__ . '/../../../../../../dravencms'); //!FIXME rewrite this into factory and use DI to find all registered fixtures
+            foreach ($this->base->getFixtures() as $fixture)
+            {
+                $loader->addFixture($fixture);
+            }
+
             $fixtures = $loader->getFixtures();
             $purger = new ORMPurger($this->em);
             $executor = new ORMExecutor($this->em, $purger);

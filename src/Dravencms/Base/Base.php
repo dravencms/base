@@ -9,6 +9,8 @@ class Base
 {
     public $templateSearchPaths = [];
 
+    public $fixtures = [];
+
     public function addTemplateSearchPath($name, $path)
     {
         $this->templateSearchPaths[$name] = $path;
@@ -33,4 +35,15 @@ class Base
 
         return null;
     }
+
+    public function addFixtureProvider($class, $name)
+    {
+        $this->fixtures[$name] = $class;
+    }
+
+    public function getFixtures()
+    {
+        return $this->fixtures;
+    }
+
 }

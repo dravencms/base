@@ -36,6 +36,10 @@ class BaseExtension extends Nette\DI\CompilerExtension
         foreach ($builder->findByType('Dravencms\Base\ITemplate') AS $serviceName => $service) {
                 $cms->addSetup('addTemplateProvider', ['@' . $serviceName]);
         }
+
+        foreach ($builder->findByType('Doctrine\Common\DataFixtures\SharedFixtureInterface') AS $serviceName => $service) {
+            $cms->addSetup('addFixtureProvider', ['@' . $serviceName, $serviceName]);
+        }
     }
 
     /**
