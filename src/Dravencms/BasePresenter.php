@@ -4,9 +4,7 @@ namespace Dravencms;
 
 use Dravencms\Base\Base;
 use Gedmo\Translatable\TranslatableListener;
-use Kdyby\Translation\Translator;
 use WebLoader\Nette\LoaderFactory;
-use Dravencms\Model\Locale\Repository\LocaleRepository;
 use Nette\Application\UI\Presenter;
 
 /**
@@ -14,17 +12,8 @@ use Nette\Application\UI\Presenter;
  */
 abstract class BasePresenter extends Presenter
 {
-    /** @var bool */
-    public $forceLoggedIn = false;
-
     /** @persistent */
     public $locale;
-
-    /** @var LocaleRepository @inject */
-    public $localeLocaleRepository;
-
-    /** @var Translator @inject */
-    public $translator;
 
     /** @var LoaderFactory @inject */
     public $webLoader;
@@ -38,9 +27,13 @@ abstract class BasePresenter extends Presenter
 
         /** @var TranslatableListener $gedmoTranslatable */
         $gedmoTranslatable = $this->context->getService('gedmo.gedmo.translatable');
-        $gedmoTranslatable->setDefaultLocale($this->localeLocaleRepository->getDefault()->getLanguageCode());
-        $gedmoTranslatable->setTranslationFallback(true);
-        $gedmoTranslatable->setTranslatableLocale($this->localeLocaleRepository->getCurrentLocale()->getLanguageCode());
+        if ($gedmoTranslatable) //!FIXME Move somewhere else
+        {
+            $localeLocaleRepository = $this->context->getByType('Dravencms\Model\Locale\Repository\LocaleRepository');
+            $gedmoTranslatable->setDefaultLocale($localeLocaleRepository->getDefault()->getLanguageCode());
+            $gedmoTranslatable->setTranslationFallback(true);
+            $gedmoTranslatable->setTranslatableLocale($localeLocaleRepository->getCurrentLocale()->getLanguageCode());
+        }
 
         parent::startup();
     }
