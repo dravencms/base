@@ -75,7 +75,7 @@ abstract class BasePresenter extends Presenter
         {
             $list[] = $found;
         }
-        
+
         return $list;
     }
 

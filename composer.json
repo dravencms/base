@@ -55,6 +55,12 @@
       "configuration": {
         "extensions": {
           "base": "Dravencms\\Base\\DI\\BaseExtension"
+        },
+        "services": {
+          "route": {
+            "class": "Dravencms\\Base\\RouterFactory"
+          },
+          "router": "@Dravencms\\Base\\RouterFactory::createRouter"
         }
       }
     }
