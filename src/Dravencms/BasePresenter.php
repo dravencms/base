@@ -29,10 +29,13 @@ abstract class BasePresenter extends Presenter
         $gedmoTranslatable = $this->context->getService('gedmo.gedmo.translatable');
         if ($gedmoTranslatable) //!FIXME Move somewhere else
         {
-            $localeLocaleRepository = $this->context->getByType('Dravencms\Model\Locale\Repository\LocaleRepository');
-            $gedmoTranslatable->setDefaultLocale($localeLocaleRepository->getDefault()->getLanguageCode());
-            $gedmoTranslatable->setTranslationFallback(true);
-            $gedmoTranslatable->setTranslatableLocale($localeLocaleRepository->getCurrentLocale()->getLanguageCode());
+            $localeLocaleRepository = $this->context->getByType('Dravencms\Model\Locale\Repository\LocaleRepository', false);
+            if ($localeLocaleRepository)
+            {
+                $gedmoTranslatable->setDefaultLocale($localeLocaleRepository->getDefault()->getLanguageCode());
+                $gedmoTranslatable->setTranslationFallback(true);
+                $gedmoTranslatable->setTranslatableLocale($localeLocaleRepository->getCurrentLocale()->getLanguageCode());
+            }
         }
 
         parent::startup();
