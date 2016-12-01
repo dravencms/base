@@ -4,6 +4,7 @@ namespace Dravencms;
 
 use Dravencms\Base\Base;
 use Gedmo\Translatable\TranslatableListener;
+use Kdyby\Translation\Translator;
 use WebLoader\Nette\LoaderFactory;
 use Nette\Application\UI\Presenter;
 
@@ -17,6 +18,9 @@ abstract class BasePresenter extends Presenter
 
     /** @var LoaderFactory @inject */
     public $webLoader;
+
+    /** @var Translator @inject */
+    public $translator;
 
     /** @var Base @inject */
     public $base;

@@ -33,7 +33,8 @@
     "joseki/pdf-response": "dev-master",
     "tecnickcom/tc-lib-barcode": ">=1.7.1",
     "gopay/payments-sdk-php": ">=1.0.1",
-    "dravencms/recaptcha": "@dev"
+    "dravencms/recaptcha": "@dev",
+    "dravencms/translation": "@dev"
   },
   "require-dev": {
     "nette/tester": "@dev"
