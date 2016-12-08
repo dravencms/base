@@ -28,9 +28,6 @@
     "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
-    "joseki/pdf-response": "dev-master",
-    "tecnickcom/tc-lib-barcode": ">=1.7.1",
-    "gopay/payments-sdk-php": ">=1.0.1",
     "dravencms/recaptcha": "@dev",
     "dravencms/translation": "@dev"
   },
