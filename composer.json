@@ -24,7 +24,6 @@
     "leafo/scssphp": "dev-master",
     "natxet/CssMin": "dev-master",
     "salamek/raven-nette": "dev-master",
-    "ipub/visual-paginator": "@dev",
     "kdyby/doctrine": "^3.1.2",
     "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^2.3",
