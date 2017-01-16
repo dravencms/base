@@ -28,7 +28,8 @@
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "@dev",
-    "dravencms/translation": "@dev"
+    "dravencms/translation": "@dev",
+    "o5/grido": "dev-master"
   },
   "require-dev": {
     "nette/tester": "@dev"
