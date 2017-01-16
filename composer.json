@@ -14,6 +14,12 @@
       "name": "Adam Schubert"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:Salamek/gedmo.git"
+    }
+  ],
   "require": {
     "php": ">=5.3.0",
     "nette/nette": "^2.4",
@@ -24,7 +30,7 @@
     "natxet/CssMin": "dev-master",
     "salamek/raven-nette": "dev-master",
     "kdyby/doctrine": "^3.1.2",
-    "rixxi/gedmo": "^1.0",
+    "rixxi/gedmo": "dev-master",
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "@dev",
