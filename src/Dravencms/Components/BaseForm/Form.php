@@ -36,7 +36,7 @@ class Form extends \Nette\Application\UI\Form
         $recaptcha = $this[$name] = new ReCaptchaField(ReCaptchaHolder::getSiteKey(), $label);
 
         $recaptcha->addRule([$this->validator, 'validateControl'], 'You`re bot!');
-        $recaptcha->setRequired(true);
+        $recaptcha->setRequired('Please solve recaptcha');
 
         return $recaptcha;
     }
