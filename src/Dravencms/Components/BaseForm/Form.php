@@ -11,4 +11,34 @@ use Minetro\Forms\reCAPTCHA\ReCaptchaValidator;
 
 class Form extends \Nette\Application\UI\Form
 {
+    /** @var ReCaptchaValidator */
+    private $validator;
+
+    /**
+     * Form constructor.
+     * @param ReCaptchaValidator $validator
+     */
+    public function __construct(ReCaptchaValidator $validator)
+    {
+        parent::__construct();
+
+        $this->validator = $validator;
+    }
+
+
+    /**
+     * @param  string  $name   Field name
+     * @param  string  $label  Html label
+     * @return ReCaptchaField
+     */
+    public function addReCaptcha($name = 'recaptcha', $label = NULL)
+    {
+        $recaptcha = $this[$name] = new ReCaptchaField(ReCaptchaHolder::getSiteKey(), $label);
+
+        $recaptcha->addRule([$this->validator, 'validateControl'], 'You`re bot!');
+        $recaptcha->setRequired('Please solve recaptcha');
+
+        return $recaptcha;
+    }
+
 }
