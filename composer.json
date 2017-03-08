@@ -29,7 +29,8 @@
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "@dev",
     "dravencms/packager": "dev-master",
-    "o5/grido": "dev-master"
+    "o5/grido": "dev-master",
+    "dravencms/paginator": "@dev"
   },
   "require-dev": {
     "nette/tester": "@dev"
