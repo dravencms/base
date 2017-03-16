@@ -7,30 +7,24 @@ namespace Dravencms\Base;
  */
 class Base
 {
-    public $templateSearchPaths = [];
+    private $templateProviders = [];
 
     public $fixtures = [];
 
-    public function addTemplateSearchPath($name, $path)
-    {
-        $this->templateSearchPaths[$name] = $path;
-    }
-
     public function addTemplateProvider(ITemplate $template)
     {
-        $this->addTemplateSearchPath($template->getName(), $template->getPath());
+        $this->templateProviders[$template->getName()] = $template;
     }
 
-    public function getTemplateSearchPaths()
-    {
-        return $this->templateSearchPaths;
-    }
-
+    /**
+     * @param $name
+     * @return ITemplate|null
+     */
     public function findTemplate($name)
     {
-        if (array_key_exists($name, $this->templateSearchPaths))
+        if (array_key_exists($name, $this->templateProviders))
         {
-            return $this->templateSearchPaths[$name];
+            return $this->templateProviders[$name];
         }
 
         return null;

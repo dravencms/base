@@ -45,7 +45,7 @@ abstract class BasePresenter extends Presenter
 
         if ($found = $this->base->findTemplate($layout))
         {
-            $list[] = $found;
+            $list[] = $found->getPath();
         }
 
         return $list;
@@ -92,5 +92,13 @@ abstract class BasePresenter extends Presenter
     public function isLoggedIn()
     {
         return $this->getUser()->isLoggedIn();
+    }
+
+    /**
+     * @return \Dravencms\Base\ITemplate|null
+     */
+    public function getCurrentTemplate()
+    {
+        return $this->base->findTemplate($this->getLayout());
     }
 }

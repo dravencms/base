@@ -6,9 +6,13 @@
 namespace Dravencms\Base;
 
 
+use Nette\Application\IPresenter;
+
 interface ITemplate
 {
     public function getPath();
 
     public function getName();
+
+    public function getMenuConfig(IPresenter $presenter);
 }
