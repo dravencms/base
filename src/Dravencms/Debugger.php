@@ -11,7 +11,7 @@ namespace Dravencms;
 
 use Tracy\Debugger AS TDebugger;
 
-class Debugger extends TDebugger
+final class Debugger extends TDebugger
 {
     public static $lastUsage = 0;
 
