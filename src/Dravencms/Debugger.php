@@ -15,7 +15,7 @@ final class Debugger extends TDebugger
 {
     public static $lastUsage = 0;
 
-    public static function memoryPoint()
+    public static function memoryPoint($name = null)
     {
         $usage = memory_get_usage();
 
@@ -25,7 +25,7 @@ final class Debugger extends TDebugger
             return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
         };
 
-        self::barDump($convert($usage - self::$lastUsage));
+        self::barDump(($name ? $name.': ' : '').$convert($usage - self::$lastUsage));
         self::$lastUsage = $usage;
     }
 }
