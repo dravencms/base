@@ -23,7 +23,7 @@
     "leafo/scssphp": "dev-master",
     "natxet/CssMin": "dev-master",
     "salamek/raven-nette": "dev-master",
-    "kdyby/doctrine": "^3.1.2",
+    "kdyby/doctrine": "3.2.1",
     "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
