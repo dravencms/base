@@ -24,7 +24,7 @@
     "natxet/CssMin": "dev-master",
     "salamek/raven-nette": "dev-master",
     "kdyby/doctrine": "3.2.1",
-    "kdyby/events": "v3.1.0",
+    "kdyby/events": "v3.0.2",
     "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
