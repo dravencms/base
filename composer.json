@@ -28,10 +28,10 @@
     "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^2.3",
     "doctrine/data-fixtures": "^1.1",
-    "dravencms/recaptcha": "@dev",
-    "dravencms/packager": "dev-master",
+    "dravencms/recaptcha": "^v1.0",
+    "dravencms/packager": "^v1.0",
     "o5/grido": "dev-master",
-    "dravencms/paginator": "@dev"
+    "dravencms/paginator": "^v1.0"
   },
   "require-dev": {
     "nette/tester": "@dev"
