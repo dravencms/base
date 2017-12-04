@@ -23,15 +23,15 @@
     "leafo/scssphp": "^v0.7",
     "natxet/CssMin": "dev-master",
     "salamek/raven-nette": "^v1.3.3",
-    "kdyby/doctrine": "3.2.1",
+    "kdyby/doctrine": "^3.2.1",
     "kdyby/events": "^v3.1",
-    "rixxi/gedmo": "^1.0",
     "zenify/doctrine-migrations": "^4.0",
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "^v1.0",
     "dravencms/packager": "^v1.0",
     "o5/grido": "dev-master",
-    "dravencms/paginator": "^v1.0"
+    "dravencms/paginator": "^v1.0",
+    "salamek/gedmo": "^1.0.8"
   },
   "require-dev": {
     "nette/tester": "@dev"
