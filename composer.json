@@ -25,7 +25,7 @@
     "salamek/raven-nette": "^v1.3.3",
     "kdyby/doctrine": "^3.2.1",
     "kdyby/events": "^v3.1",
-    "zenify/doctrine-migrations": "^4.0",
+    "zenify/doctrine-migrations": "^v2.3.5",
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "^v1.0",
     "dravencms/packager": "^v1.0",
