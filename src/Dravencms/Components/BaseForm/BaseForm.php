@@ -5,7 +5,7 @@ namespace Dravencms\Components\BaseForm;
 use Dravencms\Components\BaseControl\BaseControl;
 use Nette\Forms\IFormRenderer;
 use Nette\Localization\ITranslator;
-use Minetro\Forms\reCAPTCHA\ReCaptchaValidator;
+use Nette\Application\UI\Form;
 
 /**
  * Copyright (C) 2016 Adam Schubert <adam.schubert@sg1-game.net>.
@@ -18,18 +18,14 @@ class BaseForm extends BaseControl implements BaseFormFactory
     /** @var ITranslator */
     private $translator;
 
-    /** @var ReCaptchaValidator */
-    private $validatorFactory;
 
     /**
      * BaseForm constructor.
-     * @param ReCaptchaValidator $validator
      * @param IFormRenderer|null $renderer
      * @param ITranslator|null $translator
      */
-    public function __construct(ReCaptchaValidator $validator, IFormRenderer $renderer = null, ITranslator $translator = null)
+    public function __construct(IFormRenderer $renderer = null, ITranslator $translator = null)
     {
-        $this->validatorFactory = $validator;
         $this->renderer = $renderer;
         $this->translator = $translator;
 
@@ -42,7 +38,7 @@ class BaseForm extends BaseControl implements BaseFormFactory
      */
     public function create()
     {
-        $form = new Form($this->validatorFactory);
+        $form = new Form();
         $form->setRenderer($this->renderer);
         $form->setTranslator($this->translator);
         $form->addProtection('Please, send form again.');
