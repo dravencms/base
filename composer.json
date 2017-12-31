@@ -21,7 +21,7 @@
     "joseki/webloader-filters": "~1.0",
     "linkorb/jsmin-php": ">=1.0.0",
     "leafo/scssphp": "^v0.7",
-    "natxet/CssMin": "dev-master",
+    "natxet/CssMin": "^3.0.4",
     "salamek/raven-nette": "^v1.3.3",
     "kdyby/doctrine": "^3.2.1",
     "kdyby/events": "^v3.1",
