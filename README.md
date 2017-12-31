@@ -8,6 +8,6 @@ The best way to install dravencms/base is using  [Composer](http://getcomposer.o
 
 
 ```sh
-$ composer require dravencms/base:@dev
+$ composer require dravencms/base
 ```
 
