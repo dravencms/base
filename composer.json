@@ -38,7 +38,7 @@
     "leafo/scssphp": "^v0.7",
     "natxet/CssMin": "^3.0.4",
     "salamek/raven-nette": "^v1.3.3",
-    "kdyby/doctrine": "^v3.3.x-dev",
+    "kdyby/doctrine": "^v3.2.1",
     "kdyby/events": "^v3.1",
     "zenify/doctrine-migrations": "^v2.3.5",
     "doctrine/data-fixtures": "^1.1",
@@ -46,7 +46,8 @@
     "dravencms/packager": "^v1.0",
     "o5/grido": "dev-master",
     "dravencms/paginator": "^v1.0",
-    "salamek/gedmo": "^1.0"
+    "salamek/gedmo": "^1.0",
+    "ipub/visual-paginator": "^v1.0"
   },
   "require-dev": {
     "nette/tester": "@dev"
