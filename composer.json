@@ -38,7 +38,7 @@
     "leafo/scssphp": "^v0.7",
     "natxet/CssMin": "^3.0.4",
     "salamek/raven-nette": "^v1.3.3",
-    "kdyby/doctrine": "^3.2.1 || v3.3.x-dev",
+    "kdyby/doctrine": "^v3.3.x-dev",
     "kdyby/events": "^v3.1",
     "zenify/doctrine-migrations": "^v2.3.5",
     "doctrine/data-fixtures": "^1.1",
