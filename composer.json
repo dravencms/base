@@ -46,8 +46,7 @@
     "dravencms/packager": "^v1.0",
     "o5/grido": "dev-master",
     "dravencms/paginator": "^v1.0",
-    "salamek/gedmo": "^1.0",
-    "ipub/visual-paginator": "^v1.0"
+    "salamek/gedmo": "^1.0"
   },
   "require-dev": {
     "nette/tester": "@dev"
