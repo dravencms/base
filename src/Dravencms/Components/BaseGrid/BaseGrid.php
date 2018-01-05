@@ -3,8 +3,6 @@
 namespace Dravencms\Components\BaseGrid;
 
 use Dravencms\Components\BaseControl\BaseControl;
-use Grido\Components\Filters\Filter;
-use Grido\Customization;
 use Nette\ComponentModel\IContainer;
 use Nette\Forms\IFormRenderer;
 use Nette\Localization\ITranslator;
@@ -20,6 +18,11 @@ class BaseGrid extends BaseControl implements BaseGridFactory
     /** @var ITranslator */
     private $translator;
 
+    /**
+     * BaseGrid constructor.
+     * @param IFormRenderer|null $renderer
+     * @param ITranslator|null $translator
+     */
     public function __construct(IFormRenderer $renderer = null, ITranslator $translator = null)
     {
         $this->renderer = $renderer;
@@ -37,12 +40,7 @@ class BaseGrid extends BaseControl implements BaseGridFactory
     {
         $grid = new Grid($container, $name);
         $grid->setTranslator($this->translator);
-        $grid->setFilterRenderType(Filter::RENDER_INNER);
         $grid->setRememberState(true);
-        $grid->setStrictMode(false);
-        $customization = new Customization($grid);
-        $customization->useTemplateBootstrap();
-
         return $grid;
     }
 

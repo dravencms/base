@@ -6,8 +6,9 @@
 namespace Dravencms\Components\BaseGrid;
 
 use Dravencms\Components\BaseGrid\Columns\Boolean;
+use Ublaboo\DataGrid\DataGrid;
 
-class Grid extends \Grido\Grid
+class Grid extends DataGrid
 {
     /**
      * @param string $name
