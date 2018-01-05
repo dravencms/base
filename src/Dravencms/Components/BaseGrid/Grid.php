@@ -5,22 +5,19 @@
 
 namespace Dravencms\Components\BaseGrid;
 
-use Dravencms\Components\BaseGrid\Columns\Boolean;
+use Dravencms\Components\BaseGrid\Column\ColumnBoolean;
 use Ublaboo\DataGrid\DataGrid;
 
 class Grid extends DataGrid
 {
     /**
-     * @param string $name
-     * @param string $label
+     * @param $key
+     * @param $column
+     * @param $name
      * @return Boolean
      */
-    public function addColumnBoolean($name, $label)
+    public function addColumnBoolean($key, $column, $name = null)
     {
-        $column = new Boolean($this, $name, $label);
-        $header = $column->headerPrototype;
-        $header->style['width'] ='2%';
-        $header->class[] = 'center';
-        return $column;
+        return $this->addColumn($key, new ColumnBoolean($this, $key, $column, $name));
     }
 }
