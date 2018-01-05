@@ -16,8 +16,10 @@ class Grid extends DataGrid
      * @param $name
      * @return Boolean
      */
-    public function addColumnBoolean($key, $column, $name = null)
+    public function addColumnBoolean($key, $name, $column = null)
     {
+        $this->addColumnCheck($key);
+        $column = $column ?: $key;
         return $this->addColumn($key, new ColumnBoolean($this, $key, $column, $name));
     }
 }
