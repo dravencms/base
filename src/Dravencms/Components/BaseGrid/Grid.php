@@ -39,6 +39,7 @@ class Grid extends DataGrid
     public function addColumnPosition($key, $name, $upHref = 'up!', $downHref = 'down!', $column = null)
     {
         $this->addColumnCheck($key);
+        $column = $column ?: $key;
         return $this->addColumn($key, new ColumnPosition($this, $key, $column, $name, $upHref, $downHref));
     }
 
