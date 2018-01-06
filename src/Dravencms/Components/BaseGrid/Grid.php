@@ -15,9 +15,10 @@ class Grid extends DataGrid
 {
     /**
      * @param $key
-     * @param $column
      * @param $name
-     * @return Boolean
+     * @param null $column
+     * @return \Ublaboo\DataGrid\Column\Column
+     * @throws \Ublaboo\DataGrid\Exception\DataGridException
      */
     public function addColumnBoolean($key, $name, $column = null)
     {
