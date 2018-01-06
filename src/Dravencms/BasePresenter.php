@@ -17,6 +17,12 @@ abstract class BasePresenter extends Presenter
     /** @var Base @inject */
     public $base;
 
+    public function startup()
+    {
+        $this->invalidLinkMode = self::INVALID_LINK_EXCEPTION;
+        parent::startup();
+    }
+
     /**
      * Formats layout template file names.
      * @return array
@@ -40,11 +46,10 @@ abstract class BasePresenter extends Presenter
             $dir = dirname($dir);
         } while ($dir && ($name = substr($name, 0, strrpos($name, ':'))));
 
-        $list[] = realpath(__DIR__."/..").'/'.$this->getNamespace()."Module/templates/@$layout.latte";
+        $list[] = realpath(__DIR__ . "/..") . '/' . $this->getNamespace() . "Module/templates/@$layout.latte";
 
 
-        if ($found = $this->base->findTemplate($layout))
-        {
+        if ($found = $this->base->findTemplate($layout)) {
             $list[] = $found->getPath();
         }
 

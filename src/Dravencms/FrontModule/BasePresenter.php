@@ -11,7 +11,6 @@ class BasePresenter extends \Dravencms\BasePresenter
 {
     public function startup()
     {
-        $this->invalidLinkMode = Presenter::INVALID_LINK_EXCEPTION;
         $this->getUser()->getStorage()->setNamespace('Front');
         parent::startup();
     }
