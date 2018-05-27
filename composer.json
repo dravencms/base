@@ -39,7 +39,7 @@
     "natxet/CssMin": "^3.0.4",
     "kdyby/doctrine": "^v3.2.1",
     "kdyby/events": "^v3.1",
-    "zenify/doctrine-migrations": "^v2.3.5",
+    "nettrine/migrations": "^v0.3",
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "^v1.0",
     "dravencms/packager": "^v1.0",
