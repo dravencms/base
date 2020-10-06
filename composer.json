@@ -43,7 +43,6 @@
     "doctrine/data-fixtures": "^1.1",
     "dravencms/recaptcha": "^v1.0",
     "dravencms/packager": "^v1.0",
-    "dravencms/paginator": "^v1.0",
     "salamek/gedmo": "^1.0",
     "ublaboo/datagrid": "^5.4"
   },
