@@ -1,3 +1,7 @@
+> [!WARNING]
+> This project is deprecated and not needed for new dravencms installs
+
+
 # DravenCMS base
 
 This is a Draven CMS base
